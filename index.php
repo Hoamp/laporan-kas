@@ -8,6 +8,11 @@ if(!isset($_SESSION['login'])){
     exit;
 }
 
+function rupiah($angka){
+    $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+    return $hasil_rupiah;
+}
+
 
 $query = "SELECT * FROM kas ORDER BY tanggal DESC";
 $dataKas = mysqli_query($conn, $query);
@@ -47,7 +52,7 @@ $no = 1;
                     <tr>
                         <td><?= $no;$no++ ?></td>
                         <td><?= $data['hari'] ?></td>
-                        <td><?= $data['uang'] ?></td>
+                        <td><?= rupiah($data['uang']) ?></td>
                         <td><?= $data['tanggal'] ?></td>
                         <td>
                             <a href="ubah.php?id=<?= $data['id']; ?>" class="btn btn-warning badge">Ubah</a>

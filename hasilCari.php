@@ -1,7 +1,10 @@
 <?php 
 require_once 'database/koneksi.php';
 
-
+function rupiah($angka){
+    $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+    return $hasil_rupiah;
+}
 
 
 if(isset($_POST['cari'])){
@@ -45,7 +48,7 @@ if(isset($_POST['cari'])){
                     <tr>
                         <td><?= $no;$no++; ?></td>
                         <td><?= $s['tanggal']; ?></td>
-                        <td><?= $s['uang']; ?></td>
+                        <td><?= rupiah($s['uang']) ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

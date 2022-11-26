@@ -1,6 +1,13 @@
 <?php 
 require_once 'database/koneksi.php';
 
+
+function rupiah($angka){
+    $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+    return $hasil_rupiah;
+}
+
+
 if(isset($_POST['tambahKas'])){
     $hari = $_POST['hari'];
     $uang = $_POST['uang'];
