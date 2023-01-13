@@ -27,16 +27,26 @@ if($_GET['id']){
     <?php require_once 'layouts/_css.php'; ?>
 </head>
 <body>
+    <?php require_once 'layouts/_navbar.php'; ?>
+    <?php require_once 'layouts/atas.php'; ?>
+    
     <div class="container py-5">
+        
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Laporan kas</h2>
+                <p class="card-description">
+                    Laporan kas PT Tidak Indah Perdana
+                </p>
         <h1>Ubah kas</h1>
 
         <?php foreach($dataKas as $data): ?>
             <form action="proses.php" method="post">
                 <input type="hidden" name="id" value="<?= $data['id']; ?>">
                 <div class="mb-3 row">
-                    <div class="col-md-4">
+                    <div class="col">
                         <label for="hari" class="form-label">Hari : </label>
-                        <select class="form-select form-select-lg" name="hari">
+                        <select class="form-select form-select-lg form-control" name="hari">
                             <option value="Senin" <?php if($data['hari'] == "Senin"){ echo "selected"; } ?>>Senin</option>
                             <option value="Selasa" <?php if($data['hari'] == "Selasa"){ echo "selected"; } ?>>Selasa</option>
                             <option value="Rabu" <?php if($data['hari'] == "Rabu"){ echo "selected"; } ?>>Rabu</option>
@@ -49,14 +59,14 @@ if($_GET['id']){
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-md-4">
+                    <div class="col">
                         <label for="uang">Uang : </label>
                         <input type="number" name="uang" id="uang" class="form-control mt-2" value="<?= $data['uang']; ?>">
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-md-4">
+                    <div class="col">
                         <label for="tanggal">Tanggal : </label>
                         <input type="date" name="tanggal" id="tanggal" class="form-control mt-2" value="<?= $data['tanggal']; ?>">
                     </div>
@@ -66,8 +76,10 @@ if($_GET['id']){
             </form>
         <?php endforeach; ?>
         
-        <a href="" class="btn btn-success mt-4">Kembali</a>
+        <a href="index.php" class="btn btn-success mt-4">Kembali</a>
 
+            </div>
+        </div>
     </div>    
 
 

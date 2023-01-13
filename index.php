@@ -30,44 +30,54 @@ $no = 1;
     <?php require_once 'layouts/_css.php'; ?>
 </head>
 <body>
-
+<!-- 
     <div class="container mt-2 py-5 position-relative">
 
-        <h1 class="text-center my-4">Laporan Kas Koperasi Tidak Indah Perdana</h1>
-    
-        <a href="tambah.php" class="btn btn-primary mb-3">Tambah Kas</a>
-
-       
-
-        <table class="table table-hover">
-            <thead>
-                <th>No</th>
-                <th>Hari</th>
-                <th>Uang</th>
-                <th>Tanggal</th>
-                <th>Aksi</th>
-            </thead>
-            <tbody>
-                <?php foreach($dataKas as $data) : ?>
-                    <tr>
-                        <td><?= $no;$no++ ?></td>
-                        <td><?= $data['hari'] ?></td>
-                        <td><?= rupiah($data['uang']) ?></td>
-                        <td><?= $data['tanggal'] ?></td>
-                        <td>
-                            <a href="ubah.php?id=<?= $data['id']; ?>" class="btn btn-warning badge">Ubah</a>
-                            <a href="proses.php?id=<?= $data['id']; ?>" class="btn btn-danger badge" onclick="return confirm('yakin ingin menghapus ?')">Hapus</a>
-                        </td>
-                    </tr>
-                <?php endforeach ?>
-            </tbody>
-        </table>
         
-        <a href="cari.php" class="btn btn-primary mt-2">Cari Laporan Kas</a><br>
-        <a href="logout.php" class="btn btn-danger mt-4">Logout</a>
-    </div>
+    </div> -->
 
+    <?php require_once 'layouts/_navbar.php'; ?>
+    <?php require_once 'layouts/atas.php'; ?>
+    
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Laporan kas</h2>
+                    <p class="card-description">
+                        Laporan kas PT Tidak Indah Perdana
+                    </p>
 
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <th>No</th>
+                                <th>Hari</th>
+                                <th>Uang</th>
+                                <th>Tanggal</th>
+                                <th>Aksi</th>
+                            </thead>
+                            <tbody>
+                                <?php foreach($dataKas as $data) : ?>
+                                    <tr>
+                                        <td><?= $no;$no++ ?></td>
+                                        <td><?= $data['hari'] ?></td>
+                                        <td><?= rupiah($data['uang']) ?></td>
+                                        <td><?= $data['tanggal'] ?></td>
+                                        <td>
+                                            <a href="ubah.php?id=<?= $data['id']; ?>" class="btn btn-warning badge text-white">Ubah</a>
+                                            <a href="proses.php?id=<?= $data['id']; ?>" class="btn btn-danger badge" onclick="return confirm('yakin ingin menghapus ?')">Hapus</a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+
+    <?php require_once 'layouts/bawah.php'; ?>
     <?php require_once 'layouts/_js.php'; ?>
 </body>
 </html>
