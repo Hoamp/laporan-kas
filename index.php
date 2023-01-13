@@ -64,7 +64,7 @@ $no = 1;
                                         <td><?= rupiah($data['uang']) ?></td>
                                         <td><?= $data['tanggal'] ?></td>
                                         <td>
-                                            <a href="ubah.php?id=<?= $data['id']; ?>" class="btn btn-warning badge">Ubah</a>
+                                            <a href="ubah.php?id=<?= $data['id']; ?>" class="btn btn-warning badge text-white">Ubah</a>
                                             <a href="proses.php?id=<?= $data['id']; ?>" class="btn btn-danger badge" onclick="return confirm('yakin ingin menghapus ?')">Hapus</a>
                                         </td>
                                     </tr>

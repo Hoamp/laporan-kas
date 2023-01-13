@@ -47,7 +47,7 @@
             <p class="sidebar-menu-title">Dash menu</p>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="index.php">
               <i class="typcn typcn-device-desktop menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -55,12 +55,13 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
-              <span class="menu-title">Tables</span>
+              <span class="menu-title">Kas</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
+                <li class="nav-item"> <a class="nav-link" href="tambah.php">Tambah Kas</a></li>
+                <li class="nav-item"> <a class="nav-link" href="cari.php">Lihat Kas</a></li>
               </ul>
             </div>
           </li>
@@ -72,7 +73,7 @@
           <div class="content-wrapper">
             <div class="row">
               <div class="col-sm-6">
-                <h3 class="mb-0 font-weight-bold">Thomas Setiawan</h3>
+                <h3 class="mb-0 font-weight-bold">Selamat Datang, Thomas Setiawan</h3>
               </div>
             </div>
             <div class="row">
