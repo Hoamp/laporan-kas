@@ -63,7 +63,6 @@ if(!isset($_SESSION['login'])){
                 </form>
             </div>
         </div>
-        <a href="index.php" class="btn btn-warning mt-4 text-white">Kembali</a>
         
     </div>
     

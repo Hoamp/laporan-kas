@@ -46,7 +46,11 @@ $no = 1;
                     <p class="card-description">
                         Laporan kas PT Tidak Indah Perdana
                     </p>
-
+                    <div class="float-right">
+                        <a href="kas.php" target="_blank" class="btn btn-success"><i class="fa fa-file-pdf-o"></i> &nbsp PRINT</a>
+                        <br>
+                        <br>
+                    </div>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
