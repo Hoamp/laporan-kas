@@ -76,5 +76,5 @@
                 <h3 class="mb-0 font-weight-bold">Selamat Datang, Thomas Setiawan</h3>
               </div>
             </div>
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col">
