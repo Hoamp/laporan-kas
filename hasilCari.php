@@ -1,10 +1,6 @@
 <?php 
 require_once 'database/koneksi.php';
-
-function rupiah($angka){
-    $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
-    return $hasil_rupiah;
-}
+require_once 'functions/func.php';
 
 
 if(isset($_POST['cari'])){
@@ -13,8 +9,7 @@ if(isset($_POST['cari'])){
     $tglAkhir = $_POST['tanggalAkhir'];
     $hari = $_POST['hari'];
 
-    $query = "SELECT * FROM kas WHERE tanggal BETWEEN '$tglAwal' AND '$tglAkhir' AND hari='$hari'";
-
+    $query = "SELECT * FROM kas WHERE hari='$hari' AND tanggal BETWEEN '$tglAwal' AND '$tglAkhir'";
     
     $shows = mysqli_query($conn, $query);
     
@@ -35,7 +30,7 @@ if(isset($_POST['cari'])){
 </head>
 <body>
     <div class="container py-5">
-        <h1>hasil</h1>
+        <h1>hasil hari <?= $_POST['hari'] ?></h1>
 
         <table class="table table-hover">
             <thead>

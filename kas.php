@@ -3,6 +3,7 @@
 // ambil library dan koneksi
 require_once 'database/koneksi.php';
 require_once 'library_fpdf/fpdf.php';
+require_once 'functions/func.php';
 
 // Setting awal
 $pdf = new FPDF('P', 'mm', 'A4');
@@ -33,7 +34,7 @@ $no = 1;
 foreach($dataKas as $data){
     $pdf->Cell(10,8,$no++,1,0,'C');
     $pdf->Cell(50,8,$data['hari'],1,0);
-    $pdf->Cell(75,8,$data['uang'],1,0);
+    $pdf->Cell(75,8,rupiah($data['uang']),1,0);
     $pdf->Cell(55,8,$data['tanggal'],1,1);
 }
 
