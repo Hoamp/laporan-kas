@@ -1,5 +1,6 @@
 <?php 
 require_once 'database/koneksi.php';
+require_once 'functions/func.php';
 
 session_start();
 
@@ -8,10 +9,6 @@ if(!isset($_SESSION['login'])){
     exit;
 }
 
-function rupiah($angka){
-    $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
-    return $hasil_rupiah;
-}
 
 
 $query = "SELECT * FROM kas ORDER BY tanggal DESC";
